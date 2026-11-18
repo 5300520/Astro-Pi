@@ -1,7 +1,12 @@
+import importlib.util
 from exif import Image 
 from time import sleep
 from picamzero import Camera
 i = 0
+name = "json"
+if importlib.util.find_spec(name) is not None:
+    print("can use json")
+
 def Take_Pictures():
     i + 1
     cam = Camera()
